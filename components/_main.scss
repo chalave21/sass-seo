@@ -1,0 +1,75 @@
+@import "../base/maps";
+@import "../base/extends";
+@import "../base/mixin";
+main{
+    
+        @include colores(gray);
+    
+    section{
+        h1{
+            color: map-get($main ,h1-color );
+            padding: map-get($main ,h1-padding );
+        }
+    }
+    section{
+        @extend %disposicion;
+    }
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form{
+    width: 25%;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+label{
+    font-size: 12px;
+    display: block;
+    width: 100%;
+}
+textarea{
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+input, textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+input:focus, textarea:focus {
+    border: 1px solid #1668c4;
+}
+
+input[type="submit"] {
+    margin-bottom: 0;
+    background: #1668c4;
+    color: white;
+    border: none;
+}
+input[type="submit"]:hover{
+    background-color: #4a88f4;
+    cursor: pointer;
+}
+.main__mapa1{
+    display: flex;
+    justify-content: center;
+}
+.main__form{
+    display: flex;
+    justify-content: center;
+}
